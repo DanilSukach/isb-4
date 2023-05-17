@@ -1,4 +1,9 @@
-def luhn_algorithm(card_number: str) -> bool:
+def algorithm_luhna(card_number: str) -> bool:
+    """
+    Функция проверки корректности номера карты
+    :param card_number: номер карты
+    :return: результат проверки
+    """
     card_numbers = list(map(int, card_number))
     card_numbers = card_numbers[::-1]
     for i in range(1, len(card_numbers), 2):
