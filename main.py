@@ -36,7 +36,7 @@ if __name__ == "__main__":
                 logging.info(f"Номер карты был найден: {card_number} ({t1 - t0} секунд потребовалось)")
                 write_text(card_number, settings["card_number_file"])
             else:
-                logging.info(f"Номер карты не был найден")
+                logging.info("Номер карты не был найден")
         elif args.visualization:
             statistics = load_statistics(settings["statistics_file"])
             visualize_statistics(statistics, settings["visual_directory"])
