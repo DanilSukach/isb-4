@@ -1,4 +1,4 @@
-def algorithm_luhna(card_number: str) -> bool:
+def algorithm_luhn(card_number: str) -> bool:
     """
     Функция проверки корректности номера карты
     :param card_number: номер карты

@@ -3,7 +3,7 @@ import argparse
 from system_functions import load_settings, load_text, write_text, add_statistics, load_statistics
 from enumeration import enumerate_card_number
 from ploting import visualize_statistics
-from correction import algorithm_luhna
+from correction import algorithm_luhn
 import multiprocessing as mp
 import logging
 
@@ -42,7 +42,7 @@ if __name__ == "__main__":
             visualize_statistics(statistics, settings["visual_directory"])
         else:
             card_number = load_text(settings["card_number_file"])
-            if algorithm_luhna(card_number):
+            if algorithm_luhn(card_number):
                 logging.info(f"Номер карты {card_number} корректен")
             else:
                 logging.info(f"Номер карты {card_number} не корректен")
